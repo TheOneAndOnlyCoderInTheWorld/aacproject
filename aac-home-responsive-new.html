@@ -15,13 +15,30 @@
             text-decoration: none;
         }
 
+        a{
+            color: white;
+        }
+
+        .background-video{
+            top: 0;
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -100;
+        }
+
+
+    @media  (orientation: portrait){
+            
         header{
             display: grid;
             position: fixed;
             grid-template-columns: 1fr 1fr 1fr;
             height: 10vh;
-            background-color: transparent;
+            background-color: rgba(0, 0, 0, 0.195);
             width: 100vw;
+            font-family: "Poppins-Regular";
         }
 
         header div ul{
@@ -41,9 +58,6 @@
                 padding: 1vw;
             }
 
-            a{
-                color: black;
-            }
         } 
 
         .nav-bar{
@@ -63,17 +77,39 @@
             align-self: center;
         }
 
-        .background-video{
-            position: absolute;
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
-            z-index: -100;
-        }
+    }
 
-        @media (orientation: landscape) {
-            .text-application{
+
+    @media (orientation: landscape) {
+
+            html{
+                overflow-x: hidden;
+            }
+            header{
+                font-family: "Poppins-Regular";
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                color: white;
+                height: 10vw;
+                background-color: rgba(0, 0, 0, 0.311);
+            }
+
+            .nav-bar,.text-application{
                 display: none;
+            }
+
+            .logo-image{
+                width: 10vw;
+            }
+
+            li{
+                display: inline;
+                text-decoration: none;
+            }
+
+            .header-box-navbar,.landscape-applications,.header-box-logo{
+                justify-self: center;
+                align-self: center;
             }
         }
 
@@ -84,7 +120,7 @@
    
     <header>
         <div class="header-box-navbar">
-            <img class="nav-bar" src="Images responsive\navigation-bar.png"> <!--./navigation-bar.png-->
+            <img class="nav-bar" src="Images responsive\navigation-bar.png">
             <ul class="landscape" id="responsive">
                 <li><a href="aac-home-copilot.html">Home</a></li>
                 <li><a href="aac-about-copilot.html">Courses</a></li>
@@ -94,10 +130,10 @@
         </div>
 
         <div class="header-box-logo">
-            <img class="logo-image" src="Images responsive\AAC LOGO.png"> <!--./AAC_LOGO.png-->
+            <img class="logo-image" src="Images responsive\AAC LOGO.png"> 
         </div>
 
-        <div>
+        <div class="landscape-applications">
             <ul><li><a href="">Applications</a></li></ul>
         </div>
     </header>
