@@ -1,0 +1,19 @@
+        @font-face {
+            font-family: "GOOD-TIMING";
+            src: url("Fonts/good timing bd.otf");
+        }
+
+        @font-face {
+            font-family: "Poppins-ExtraLight";
+            src: url("Fonts/Poppins-ExtraLight.ttf");
+        }
+
+        @font-face {
+            font-family: "Poppins-Light";
+            src: url("Fonts/Poppins-Light.ttf");
+        }
+
+        @font-face {
+            font-family: "Poppins-Regular";
+            src: url("Fonts/Poppins-Regular.ttf");
+        }
