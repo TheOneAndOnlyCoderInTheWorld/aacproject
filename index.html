@@ -6,7 +6,6 @@
     <title>AAC Home</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="@font-face .css">
-    <link rel="stylesheet" href="header.css">
     <style>
         * {
             margin: 0;
@@ -18,7 +17,16 @@
         a {
             color: white;
         }
-        
+
+        .bg-video-safari{
+            background-image: url('Images responsive/2662760265 (2).mp4');
+            background-size: cover;
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
+            z-index: -1;
+        }
+
         .background-video {
             top: 0;
             position: absolute;
@@ -28,7 +36,188 @@
             z-index: -100;
         }
 
-</style>
+        @media (orientation: portrait) {
+            header {
+                display: grid;
+                position: fixed;
+                grid-template-columns: 1fr 1fr 1fr;
+                height: 10vh;
+                background-color: rgb(255, 255, 255);
+                width: 100vw;
+                font-family: "Poppins-Regular";
+            }
+
+            header div ul {
+                display: none;
+            }
+
+            .portrait {
+                display: block;
+                position: fixed;
+                background-color: rgb(0, 0, 0);
+                color: rgb(255, 255, 255);
+                width: 100vw;
+                font-size: 3vw;
+                margin-top: 2.5vh;
+                font-size: 5vw;
+                list-style-type: none;
+                max-height: 100vh; /* Adjust this value as needed */
+                overflow-y: auto; /* Makes the submenu scrollable */
+            }
+
+            .portrait li {
+                padding: 1vw;
+                border-bottom: 1px solid white;
+                margin: 3vw 0 3vw 0;
+            }
+
+            .portrait li:last-child {
+                border-bottom: none;
+            }
+
+            .nav-bar {
+                width: 5vw;
+                margin-left: 5vw;
+            }
+
+            .logo-image {
+                width: 15vw;
+            }
+
+            .header-box-navbar {
+                justify-self: start;
+                align-self: center;
+            }
+
+            .header-box-logo {
+                justify-self: center;
+                align-self: center;
+            }
+
+            .home{
+                margin-top: 5vw;
+            }
+
+            .text-application{
+                margin-bottom: 5vw;
+            }
+
+            .dropdownList {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                align-items: center;
+                list-style-type: none;
+            }
+
+            .dropdownList > .submenu {
+                display: none;
+                width: 80vw;
+                background-color: rgba(0, 0, 0, 0.8);
+                list-style-type: none;
+                padding: 1vw;
+                margin: 1vw 0 0 1vw;
+            }
+
+            .dropdownImage {
+                justify-self: end;
+                align-self: center;
+                width: 2vw;
+                margin-right: 3vw;
+            }
+
+            .submenu li a{
+                font-family: "Poppins-ExtraLight";
+                font-size: 4vw;
+            }
+
+            .submenu li {
+                margin-bottom: 1vw;
+                padding-bottom: 3vw;
+            }
+        }
+
+        @media (orientation: landscape) {
+            html {
+                overflow-x: hidden;
+            }
+
+            header {
+                font-family: "Poppins-Regular";
+                display: grid;
+                width: 100vw;
+                grid-template-columns: 1fr 1fr 1fr;
+                color: white;
+                height: 10vw;
+                background-color: rgba(0, 0, 0, 0.311);
+                align-items: center;
+            }
+
+            .nav-bar, .text-application, .dropdownImage, .dropdownImage .dropdownList {
+                display: none;
+            }
+
+            .logo-image {
+                width: 10vw;
+            }
+
+            li {
+                display: inline;
+                text-decoration: none;
+            }
+
+            .header-box-logo {
+                justify-self: center;
+                align-self: center;
+            }
+
+            .header-box-navbar {
+                justify-self: start;
+                align-self: center;
+                margin-left: 5vw;
+            }
+
+            .landscape-applications {
+                justify-self: end;
+                align-self: center;
+                margin-right: 10vw;
+                font-size: 1.5vw;
+            }
+
+            .home, .landscape-application, .header-landscape {
+                font-size: 1.5vw;
+                padding: 0 1.5vw;
+            }
+
+            .submenu {
+                position: absolute;
+                display: none;
+                background-color: black;
+                list-style-type: none;
+                padding: 1vw;
+                margin-top: 10vw;
+                z-index: 10;
+            }
+
+            .submenu .dropdownList{
+                display: block;
+            }
+
+            .submenu li {
+                margin: 1vw 0;
+            }
+
+            .submenu li a {
+                color: white;
+                text-decoration: none;
+                display: block;
+                padding: 0.5vw 1vw;
+            }
+
+            .firstsubmenu{
+                font-size: 1.5vw;
+            }
+
+        }
     </style>
 </head>
 <body>
@@ -36,13 +225,13 @@
         <div class="header-box-navbar">
             <img class="nav-bar" src="Images responsive/navigation-bar.png" alt="Nav Bar">
             <ul class="landscape" id="responsive">
-                <li><a href="aac-home-copilot.html">Home</a></li>
+                <li class="home"><a href="aac-home-copilot.html">Home</a></li>
                 <li class="dropdownList">
-                    <span>Courses</span>
+                    <span class="header-landscape">Courses</span>
                     <img class="dropdownImage" src="Images responsive/Chevron-icon-drop-down-menu-WHITE.png">
                     <ul class="submenu">
                         <li class="dropdownList">
-                            <span>Engineering Academy</span>
+                            <span class="firstsubmenu">Engineering Academy</span>
                             <img class="dropdownImage" src="Images responsive/Chevron-icon-drop-down-menu-WHITE.png">
                             <ul class="submenu">
                                 <li><a href="#">BSc (Hons) In Aerospace Engineering</a></li>
@@ -54,7 +243,7 @@
                             </ul>
                         </li>
                         <li class="dropdownList">
-                            <span>Flying Academy</span>
+                            <span class="firstsubmenu">Flying Academy</span>
                             <img class="dropdownImage" src="Images responsive/Chevron-icon-drop-down-menu-WHITE.png">
                             <ul class="submenu">
                                 <li><a href="#">Private Pilot License (Aeroplane)</a></li>
@@ -66,7 +255,7 @@
                             </ul>
                         </li>
                         <li class="dropdownList">
-                            <span>Aviation Cabin Crew</span>
+                            <span class="firstsubmenu">Aviation Cabin Crew</span>
                             <img class="dropdownImage" src="Images responsive/Chevron-icon-drop-down-menu-WHITE.png">
                             <ul class="submenu">
                                 <li><a href="#">Airline Cabin Crew Certificate</a></li>
@@ -75,7 +264,7 @@
                     </ul>
                 </li>
                 <li class="dropdownList">
-                    <span>About Us</span>
+                    <span class="header-landscape">About Us</span>
                     <img class="dropdownImage" src="Images responsive/Chevron-icon-drop-down-menu-WHITE.png">
                     <ul class="submenu">
                         <li><a href="#">Company Profile</a></li>
@@ -93,7 +282,8 @@
         </div>
     </header>
 
-    <video width="100vw" height="100vh" muted loop class="background-video" id="autoplay">
+    <div class="bg-video-safari"></div>
+    <video playsinline autoplay muted loop class="background-video">
         <source src="Images responsive/2662760265 (2).mp4" type="video/mp4">
     </video>
 
@@ -106,14 +296,11 @@
     </footer>
 
     <script>
-        window.onload = function(){
-            document.getElementById("autoplay").play()
-        }
         function navbar() {
             let nav = document.querySelector(".nav-bar");
             let ul = document.querySelector(".landscape");
             let firstTimeClick = true;
-    
+
             nav.addEventListener("click", function() {
                 if (firstTimeClick) {
                     ul.classList.remove("landscape");
@@ -125,10 +312,10 @@
                 firstTimeClick = !firstTimeClick;
             });
         }
-    
+
         function setupDropdowns() {
             const dropdowns = document.querySelectorAll('.dropdownList');
-    
+
             dropdowns.forEach(dropdown => {
                 dropdown.addEventListener('click', function(event) {
                     event.stopPropagation();
@@ -137,7 +324,7 @@
                         submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
                     }
                 });
-    
+
                 document.addEventListener('click', function() {
                     const submenu = dropdown.querySelector('.submenu');
                     if (submenu) {
@@ -146,9 +333,18 @@
                 });
             });
         }
-    
+
         navbar();
         setupDropdowns();
+
+        window.onload = function() {
+            let video = document.querySelector('.background-video');
+            video.play();
+        }
+
+        window.onload = function(){
+            document.getElementById("autoplay").play()
+        }
     </script>
 </body>
 </html>
